@@ -30,6 +30,14 @@ h3 {
   line-height: 1.3;
 }
 
+h4 {
+  font-family: cursive, sans-serif;
+  color: gray;
+  font-size: 1.728rem;
+  font-size: clamp(1.728rem, 1.2359191919191916rem + 1.2949494949494955vw, 2.369rem);
+  line-height: 1.3;
+}
+
 .container {
   width: 90%; 
   max-width: 87.5rem;
