@@ -1,52 +1,37 @@
-/* --- Desktop Navigation --- */
+/* Desktop Nav Styles */
 .nav-desktop {
-    display: block; /* Shown by default */
-    background-color: #f0f0f0;
-    padding: 1rem;
+  display: block; /* Visible by default */
 }
 
 .nav-desktop ul {
-    display: flex;
-    list-style: none;
-    flex-direction: row;
-    gap: 20px;
+  display: flex;
+  list-style: none;
+  flex-direction: row;
+  gap: 16px;
 }
 
-/* --- Mobile Navigation --- */
+/* Mobile Nav Styles */
 .nav-mobile {
-    background-color: #333;
-    color: white;
-    padding: 1rem;
-    
-    /* 1. Move it off-screen to the left */
-    transform: translateX(-150%); 
-    
-    /* 2. Add the transition for the slide effect */
-    transition: transform 0.5s ease;
-    
-    /* Optional: position it so it doesn't take up space while hidden */
-    position: absolute; 
-    width: 100%;
+  /* Positioned off-screen to the left */
+  transform: translateX(-150%); 
+  transition: transform .5s ease;
 }
 
 .nav-mobile ul {
-    display: flex;
-    list-style: none;
-    flex-direction: column;
-    gap: 16px;
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  gap: 16px;
 }
 
-/* --- The Media Query Switch --- */
-
 @media (max-width: 40rem) {
-    /* Hide the desktop nav */
-    .nav-desktop {
-        display: none;
-    }
+  /* Hide the desktop menu */
+  .nav-desktop {
+    display: none;
+  }
 
-    /* Slide the mobile nav into view (0% is its natural position) */
-    .nav-mobile {
-        transform: translateX(0%);
-        position: relative; /* Bring it back into the document flow */
-    }
+  /* Slide the mobile menu back to its original position (on-screen) */
+  .nav-mobile {
+    transform: translateX(0%);
+  }
 }
