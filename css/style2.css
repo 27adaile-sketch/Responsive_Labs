@@ -11,7 +11,8 @@ body {
 h1 {
   font-family: Georgia, serif;
   color: gray;
-  font-size: clamp(3.052rem, 2.437rem + 3.02vw, 5.61rem);
+  font-size: 2.986rem;
+font-size: clamp(2.986rem, 0.9716161616161618rem + 5.301010101010101vw, 5.61rem);
   line-height: 1.2;
 }
 
