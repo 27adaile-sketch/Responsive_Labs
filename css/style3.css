@@ -1,17 +1,8 @@
-/* --- Base Styles --- */
-body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 20px;
-    /* Verify link: Change this to 'red' to test, then back to white */
-    background-color: white; 
-}
-
-/* --- Desktop Nav (Default) --- */
+/* --- Desktop Navigation --- */
 .nav-desktop {
-    display: block;
-    background-color: #f4f4f4;
-    padding: 10px;
+    display: block; /* Shown by default */
+    background-color: #f0f0f0;
+    padding: 1rem;
 }
 
 .nav-desktop ul {
@@ -19,16 +10,23 @@ body {
     list-style: none;
     flex-direction: row;
     gap: 20px;
-    margin: 0;
-    padding: 0;
 }
 
-/* --- Mobile Nav (Hidden by Default) --- */
+/* --- Mobile Navigation --- */
 .nav-mobile {
-    display: none; /* Hide on large screens */
     background-color: #333;
     color: white;
-    padding: 20px;
+    padding: 1rem;
+    
+    /* 1. Move it off-screen to the left */
+    transform: translateX(-150%); 
+    
+    /* 2. Add the transition for the slide effect */
+    transition: transform 0.5s ease;
+    
+    /* Optional: position it so it doesn't take up space while hidden */
+    position: absolute; 
+    width: 100%;
 }
 
 .nav-mobile ul {
@@ -36,24 +34,19 @@ body {
     list-style: none;
     flex-direction: column;
     gap: 16px;
-    margin: 0;
-    padding: 0;
 }
 
-.nav-mobile a {
-    color: white;
-    text-decoration: none;
-}
+/* --- The Media Query Switch --- */
 
-/* --- Responsive Logic --- */
-
-/* When the screen is 768px wide or less */
-@media (max-width: 768px) {
+@media (max-width: 40rem) {
+    /* Hide the desktop nav */
     .nav-desktop {
-        display: none; /* Hide desktop nav */
+        display: none;
     }
 
+    /* Slide the mobile nav into view (0% is its natural position) */
     .nav-mobile {
-        display: block; /* Show mobile nav */
+        transform: translateX(0%);
+        position: relative; /* Bring it back into the document flow */
     }
 }
