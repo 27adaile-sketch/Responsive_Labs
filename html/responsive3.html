@@ -3,26 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive 3 - Sliding Nav</title>
-    <link rel="stylesheet" href="style3.css">
+    <title>Responsive Lab 3</title>
+    <link rel="stylesheet" href="../css/style3.css">
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
-    <header>
-  <nav class="nav-desktop">
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
 
-  <nav class="nav-mobile">
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+    <header>
+        <input class="check" type="checkbox" id="hamburger-checkbox">
+
+        <label class="hamburger" for="hamburger-checkbox">
+            <ion-icon name="menu-outline" class="nav-icon-hamburger"></ion-icon>
+            <ion-icon name="close-outline" class="nav-icon-close"></ion-icon>
+        </label>
+
+        <nav class="nav-desktop">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="responsive-1.html">Responsive 1</a></li>
+                <li><a href="responsive-2.html">Responsive 2</a></li>
+            </ul>
+        </nav>
+
+        <nav class="nav-mobile">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="responsive-1.html">Responsive 1</a></li>
+                <li><a href="responsive-2.html">Responsive 2</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Responsive Lab 3</h1>
+        <p>Try resizing your browser window or using Inspect Element to see the mobile menu in action!</p>
+    </main>
+
 </body>
 </html>
